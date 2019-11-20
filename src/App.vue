@@ -1,29 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    
+      <router-view/>
+    
   </div>
 </template>
+<script>
+export default {
+  name : 'app',
 
+}
+</script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding : 0;
+  line-height: 1.4
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background: #1c1c1c;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  min-height: 100vh;
+font-family: 'Quicksand', sans-serif;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+  input {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background: #1c1c1c;
+    border-bottom: 2px solid white;;
+    color: white;
+    width: 600px;
+    max-width: 90vw;
+    transition: all 0.3s ease-in-out;
+      
+      &::placeholder{
+        color: rgba(white,0.6);
+      }
+      &:focus{
+        border-bottom: solid 2px violet;
+      }
+}
+.container{
+      width: 1000px;
+      max-width: 90vw;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
     }
-  }
-}
 </style>
